@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/442d380662.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-9">
+          <form class="search-form">
+            <input type="text" id="search" placeholder="🔍 Change City...." />
+            <input
+              class="searchButton"
+              type="submit"
+              id="searchButton"
+              value="search"
+            />
+          </form>
+        </div>
+        <div class="col-3">
+          <button type="button" class="currentButton" id="currentButton">
+            Current Location
+          </button>
+        </div>
+      </div>
+      <div class="location">
+        <h1>City</h1>
+      </div>
+      <div class="country">country_code</div>
+      <div class="date"></div>
+
+      
+        
+          <div class="units">
+            <a href="#" id="celsius-link">°C</a> |
+            <a href="#" id="fahrenheit-link">°F</a>
+          </div>
+          <div class="temperature" <span id="temperature"></span>℃</div>
+          
+          <div class="condition">☀️Mostly Clear</div>
+        
+
+        <div class="row">
+          <ul class="weather">
+            <li class="col-3"><span>H: </span><span id="max"> </span>℃</li>
+            <li class="col-3"><span>L: </span><span id="min"> </span>℃</li>
+            <li class="col-3"><span>Humidity: </span><span id="humidity"> </span>%</li>
+            <li class="col-3"><span>Wind speed: </span><span id="wind"> </span>km/hr</li>
+          </ul>
+        </div>
+      
+
+      <p>
+        <em
+          >Partly cloudy conditions from 02:00 - 04:00, with mostly cloudy
+          conditions expected at 05:00.</em
+        >
+      </p>
+
+      <hr />
+      <div class="header"><em>🕛Hourly Forecast</em></div>
+      <ul class="hourlyForecast">
+          <li>
+            Now <br />
+            🌙 <br />
+            11℃
+          </li>
+
+          <li>
+            01:00 <br />
+            🌙 <br />
+            07℃
+          </li>
+
+          <li>
+            02:00 <br />
+            🌙 <br />
+            09℃
+          </li
+          <li>
+            03:00 <br />
+            ☁️ <br />
+            09℃
+          </li>
+          <li>
+            04:00 <br />
+            ☁️ <br />
+            09℃
+          </li>
+          <li>
+            05:00 <br />
+            🌅 <br />
+            10℃
+          </li>
+        </ul>
+      
+      <hr />
+      <div class="dailyyForecast">
+        <div class="header">
+          <em>📅5 Day Forecast</em>
+        </div>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item day flex-fill">Today☀️</li>
+
+          <li class="list-group-item temp flex-fill temp">10℃/16℃</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-sm">
+          <li class="list-group-item day flex-fill">Mon🌤️</li>
+
+          <li class="list-group-item temp flex-fill temp">12℃/19℃</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-md">
+          <li class="list-group-item day flex-fill">Tue☀️</li>
+
+          <li class="list-group-item temp flex-fill temp">11℃/14℃</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-lg">
+          <li class="list-group-item day flex-fill">Wed⛈️</li>
+
+          <li class="list-group-item temp flex-fill temp">07℃/11℃</li>
+        </ul>
+        <ul class="list-group list-group-horizontal-xl">
+          <li class="list-group-item day flex-fill">Thur🌦️</li>
+
+          <li class="list-group-item temp flex-fill">09℃/12℃</li>
+        </ul>
+      </div>
+    
+      <hr />
+      <footer><em>coded by Moud Mpofu</em></footer>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
