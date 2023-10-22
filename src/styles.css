@@ -75,7 +75,7 @@ p {
 .weather {
   list-style-type: none;
   text-align: center;
-  gap: 20px;
+  gap: 10px;
   display: inline-flex;
   font-size: 13px;
   color: black;
