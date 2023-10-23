@@ -70,6 +70,11 @@ body {
   font-size: 20px;
   font-weight: lighter;
 }
+p {
+  font-family: cursive;
+  font-size: 10px;
+  font-weight: lighter;
+}
 .weather {
   list-style-type: none;
   text-align: center;
