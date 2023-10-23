@@ -59,12 +59,18 @@ function showTemperature(response) {
   document.querySelector("#min").innerHTML = Math.round(
     response.data.main.temp_min
   );
-  document.querySelector(".condition").innerHTML =
+  document.querySelector(".description").innerHTML =
     response.data.weather[0].description;
-
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
   celsiusTemperature = response.data.main.temp;
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 function searchLocation(position) {
   let apiKey = "fa4d98a1b55bfa6e99bb8f32851d7b49";

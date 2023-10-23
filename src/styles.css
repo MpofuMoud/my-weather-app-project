@@ -43,7 +43,7 @@ body {
 }
 
 .location {
-  line-height: 20px;
+  font-size: 40px;
   margin: 10px 0;
   font-weight: bolder;
   line-height: 15px;
@@ -67,7 +67,7 @@ body {
 
 .condition {
   font-family: cursive;
-  font-size: 10px;
+  font-size: 20px;
   font-weight: lighter;
 }
 .weather {
