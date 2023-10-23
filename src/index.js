@@ -51,9 +51,8 @@ function showTemperature(response) {
   console.log(response.data);
   document.querySelector(".location").innerHTML = response.data.name;
   document.querySelector(".country").innerHTML = response.data.sys.country;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
   document.querySelector("#max").innerHTML = Math.round(
     response.data.main.temp_max
   );
@@ -65,8 +64,6 @@ function showTemperature(response) {
 
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
-  document.querySelector.querySelector("#icon").innerHTML =
-    response.data.weather[0].icon;
 }
 function searchLocation(position) {
   let apiKey = "fa4d98a1b55bfa6e99bb8f32851d7b49";
@@ -85,3 +82,25 @@ function searchCity(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
 }
+searchCity("Warsaw");
+
+function celsiusUnitsChange(event) {
+  event.preventDefault();
+
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+function fahrenheitUnitsChange(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+let celsiusTemperature = null;
+let fahrenheitUnits = document.querySelector("#fahrenheit-link");
+fahrenheitUnits.addEventListener("click", fahrenheitUnitsChange);
+
+let celsiusUnits = document.querySelector("#celsius-link");
+celsiusUnits.addEventListener("click", celsiusUnitsChange);
