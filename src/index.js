@@ -65,6 +65,8 @@ function showTemperature(response) {
 
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
+  document.querySelector.querySelector("#icon").innerHTML =
+    response.data.weather[0].icon;
 }
 function searchLocation(position) {
   let apiKey = "fa4d98a1b55bfa6e99bb8f32851d7b49";

@@ -43,34 +43,36 @@
       </div>
       <div class="country">country_code</div>
       <div class="date"></div>
-
-      <div class="units">
-        <a href="#" id="celsius-link">°C</a> |
-        <a href="#" id="fahrenheit-link">°F</a>
-      </div>
-      <div class="temperature"><span id="temperature"></span>℃</div>
-
-      <div class="condition"><span id="icon">☀️</span>Mostly Clear</div>
-
       <div class="row">
-        <ul class="weather">
-          <li class="col-3"><span>H: </span><span id="max"> </span>℃</li>
-          <li class="col-3"><span>L: </span><span id="min"> </span>℃</li>
-          <li class="col-3">
-            <span>Humidity: </span><span id="humidity"> </span>%
-          </li>
-          <li class="col-3">
-            <span>Wind speed: </span><span id="wind"> </span>km/hr
-          </li>
-        </ul>
-      </div>
+        <div class="col">
+          <div class="units">
+            <a href="#" id="celsius-link">°C</a> |
+            <a href="#" id="fahrenheit-link">°F</a>
+          </div>
+          <div class="temperature"><span id="temperature"></span>℃</div>
 
-      <p>
-        <em
-          >Partly cloudy conditions from 02:00 - 04:00, with mostly cloudy
-          conditions expected at 05:00.</em
-        >
-      </p>
+          <div class="condition">
+            <em
+              >Partly cloudy conditions from 02:00 - 04:00, with mostly cloudy
+              conditions expected at 05:00.</em
+            >
+          </div>
+        </div>
+
+        <div class="col">
+          <ul class="weather">
+            <li><span class="type">H: </span><span id="max"> </span>℃</li>
+            <li><span class="type">L: </span><span id="min"> </span>℃</li>
+            <li>
+              <span class="type">Humidity: </span><span id="humidity"> </span>%
+            </li>
+            <li>
+              <span class="type">Wind speed: </span
+              ><span id="wind"> </span>km/hr
+            </li>
+          </ul>
+        </div>
+      </div>
 
       <hr />
       <div class="header"><em>🕛Hourly Forecast</em></div>
@@ -116,7 +118,7 @@
         </div>
         <ul class="list-group list-group-horizontal">
           <li class="list-group-item day flex-fill">
-            Today☀️<span class="icon2">☀️</span>
+            Today<span class="icon2">☀️</span>
           </li>
 
           <li class="list-group-item temp flex-fill temp">

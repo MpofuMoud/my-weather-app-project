@@ -65,9 +65,7 @@ body {
   font-size: 15px;
 }
 
-h3 {
-}
-p {
+.condition {
   font-family: cursive;
   font-size: 10px;
   font-weight: lighter;
@@ -75,12 +73,13 @@ p {
 .weather {
   list-style-type: none;
   text-align: center;
-  gap: 10px;
-  display: inline-flex;
   font-size: 13px;
   color: black;
   margin-top: 15px auto;
   font-weight: bold;
+}
+.type {
+  color: #0000ff;
 }
 
 .hourlyForecast {
