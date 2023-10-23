@@ -75,7 +75,7 @@ p {
 .weather {
   list-style-type: none;
   text-align: center;
-  gap: 15px;
+  gap: 10px;
   display: inline-flex;
   font-size: 13px;
   color: black;
@@ -87,7 +87,7 @@ p {
   list-style-type: none;
   text-align: center;
   padding: 10px;
-  gap: 20px;
+  gap: 10px;
   display: inline-flex;
   font-size: 16px;
   margin-top: 15px auto;
