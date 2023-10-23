@@ -64,6 +64,7 @@ function showTemperature(response) {
 
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
+  celsiusTemperature = response.data.main.temp;
 }
 function searchLocation(position) {
   let apiKey = "fa4d98a1b55bfa6e99bb8f32851d7b49";
@@ -90,7 +91,7 @@ function celsiusUnitsChange(event) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
-
+let celsiusTemperature = null;
 function fahrenheitUnitsChange(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
@@ -98,7 +99,7 @@ function fahrenheitUnitsChange(event) {
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
-let celsiusTemperature = null;
+
 let fahrenheitUnits = document.querySelector("#fahrenheit-link");
 fahrenheitUnits.addEventListener("click", fahrenheitUnitsChange);
 
