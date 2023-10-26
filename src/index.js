@@ -63,7 +63,7 @@ function dailyForecast(response) {
   width="45px"/>
   <div class="weather-temp"><span class="max">${Math.round(
     forecastDay.temperature.maximum
-  )}° </span>
+  )}° </span>|
   <span class="min">${Math.round(
     forecastDay.temperature.minimum
   )}°</span></div></div>`;
