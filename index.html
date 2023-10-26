@@ -21,7 +21,7 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-9">
+        <div class="col">
           <form class="search-form">
             <input type="text" id="search" placeholder="🔍 Change City...." />
             <input
@@ -32,7 +32,7 @@
             />
           </form>
         </div>
-        <div class="col-3">
+        <div class="col">
           <button type="button" class="currentButton" id="currentButton">
             Current Location
           </button>
@@ -43,21 +43,18 @@
       </div>
       <div class="country">country_code</div>
       <div class="date"></div>
+      <div class="description"></div>
       <div class="row">
-        <div class="col">
-          <div class="units">
-            <a href="#" id="celsius-link">°C</a> |
-            <a href="#" id="fahrenheit-link">°F</a>
-          </div>
-          <div class="temperature"><span id="temperature"></span>°</div>
-
+        <div class="col-6">
           <div class="condition">
-            <span><img src="" alt="" id="icon" /></span>
-            <em class="description"></em>
+            <img src="" alt="" id="icon" />
+            <span class="float-left temperature">
+              <span id="temperature"></span>℃
+            </span>
           </div>
         </div>
 
-        <div class="col">
+        <div class="col-6">
           <ul class="weather">
             <li>
               <span class="type">Feels like: </span><span id="feels"> </span>℃
@@ -89,9 +86,9 @@
           href="https://github.com/MpofuMoud/my-weather-app-project"
           target="_blank"
           rel="noreferrer"
-          >open source code
+          >open source code by Moud Mpofu
         </a>
-        by Moud Mpofu,<em>Hosted on</em>
+        ,Hosted on
         <a
           href="https://imaginative-bavarois-a5b0e8.netlify.app"
           target="_blank"

@@ -55,7 +55,7 @@ function dailyForecast(response) {
       forecastHTML =
         forecastHTML +
         `<div class ="col-2">
-  <div class="weather-forecast-hour">${formatDay(forecastDay.time)}</div>
+  <div class="weather-forecast-day">${formatDay(forecastDay.time)}</div>
   <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
     forecastDay.condition.icon
   }.png"
@@ -93,7 +93,6 @@ function showTemperature(response) {
   document.querySelector(".country").innerHTML = response.data.country;
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
-
   document.querySelector("#feels").innerHTML = Math.round(
     response.data.temperature.feels_like
   );
@@ -130,24 +129,3 @@ function searchCity(city) {
   axios.get(`${apiUrl}&key=${apiKey}`).then(showTemperature);
 }
 searchCity("Warsaw");
-
-function celsiusUnitsChange(event) {
-  event.preventDefault();
-
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-let celsiusTemperature = null;
-function fahrenheitUnitsChange(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-let fahrenheitUnits = document.querySelector("#fahrenheit-link");
-fahrenheitUnits.addEventListener("click", fahrenheitUnitsChange);
-
-let celsiusUnits = document.querySelector("#celsius-link");
-celsiusUnits.addEventListener("click", celsiusUnitsChange);
