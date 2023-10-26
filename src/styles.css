@@ -1,5 +1,5 @@
 body {
-  background-color: #20b7f7;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/102/016/original/clear-sky-clouds-nature-5k-f3.jpg?1698332251");
 }
 
 .container {
@@ -7,8 +7,8 @@ body {
   display: block;
   text-align: center;
   margin: 20px auto;
-  max-width: 700px;
-  padding: 30px;
+  max-width: 600px;
+  padding: 20px;
   border: solid 2px rgb(32, 183, 247);
   border-radius: 20px;
   background-color: rgb(170, 226, 236);
@@ -97,8 +97,4 @@ p {
   font-size: 15px;
   font-family: cursive;
   font-weight: lighter;
-}
-.description {
-  padding: none;
-  margin-top: 0;
 }
