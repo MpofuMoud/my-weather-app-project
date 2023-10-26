@@ -56,11 +56,11 @@ function dailyForecast(response) {
         forecastHTML +
         `<div class ="col-2">
   <div class="weather-forecast-hour">${formatDay(forecastDay.time)}</div>
-  img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+  <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
     forecastDay.condition.icon
   }.png"
-                   alt="" 
-                   width="45px"/>
+  alt="" 
+  width="45px"/>
   <div class="weather-temp"><span class="max">${Math.round(
     forecastDay.temperature.maximum
   )}° </span>
@@ -76,7 +76,7 @@ function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "b93bfbo44bd8a88678e0t635d05036d5";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&units=metric`;
-  axios.get(`${apiUrl}&appid=${apiKey}`).then(dailyForecast);
+  axios.get(`${apiUrl}&key=${apiKey}`).then(dailyForecast);
 }
 
 function changeCity(event) {
@@ -104,7 +104,7 @@ function showTemperature(response) {
   document.querySelector("#humidity").innerHTML =
     response.data.temperature.humidity;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
-  celsiusTemperature = response.data.main.temp;
+  celsiusTemperature = response.data.temperature.current;
 
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
@@ -117,7 +117,7 @@ function showTemperature(response) {
 function searchLocation(position) {
   let apiKey = "b93bfbo44bd8a88678e0t635d05036d5";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric`;
-  axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
+  axios.get(`${apiUrl}&key=${apiKey}`).then(showTemperature);
 }
 function currentLocation(event) {
   event.preventDefault();
@@ -129,7 +129,7 @@ currentButton.addEventListener("click", currentLocation);
 function searchCity(city) {
   let apiKey = "b93bfbo44bd8a88678e0t635d05036d5";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&units=metric`;
-  axios.get(`${apiUrl}&appid=${apiKey}`).then(showTemperature);
+  axios.get(`${apiUrl}&key=${apiKey}`).then(showTemperature);
 }
 searchCity("Warsaw");
 
