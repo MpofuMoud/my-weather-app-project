@@ -1,7 +1,6 @@
 body {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/102/016/original/clear-sky-clouds-nature-5k-f3.jpg?1698332251");
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/102/018/original/beautiful-clouds.jpg?1698332725");
 }
-
 .container {
   font-family: Georgia, "Times New Roman", Times, serif;
   display: block;
@@ -65,11 +64,6 @@ body {
   font-size: 15px;
 }
 
-.condition {
-  font-family: cursive;
-  font-size: 20px;
-  font-weight: lighter;
-}
 p {
   font-family: cursive;
   font-size: 10px;
@@ -90,11 +84,20 @@ p {
 .min,
 .weather-forecast-day,
 .type {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 .header {
   color: rgb(51, 120, 224);
   font-size: 15px;
   font-family: cursive;
   font-weight: lighter;
+}
+.description,
+.update {
+  text-align: left;
+  margin-left: 40px;
+  opacity: 0.8;
+}
+footer {
+  text-align: center;
 }
