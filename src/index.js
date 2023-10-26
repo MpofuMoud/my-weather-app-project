@@ -93,11 +93,9 @@ function showTemperature(response) {
   document.querySelector(".country").innerHTML = response.data.country;
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
-  document.querySelector("#max").innerHTML = Math.round(
-    response.data.temperature.maximum
-  );
-  document.querySelector("#min").innerHTML = Math.round(
-    response.data.temperature.min
+
+  document.querySelector("#feels").innerHTML = Math.round(
+    response.data.temperature.feels_like
   );
   document.querySelector(".description").innerHTML =
     response.data.condition.description;
